@@ -75,6 +75,7 @@ public class HomeTests extends TestBase {
         steps.openPage();
         steps.closeCookie();
         steps.chooseCity("Санкт-Петербург и ЛО");
+        steps.checkTopHeader("Санкт-Петербург и ЛО");
         steps.checkTopHeader("Магазины");
         steps.checkTopHeader("Сервисные центры");
         steps.checkTopHeader("Бизнесу");
@@ -98,8 +99,6 @@ public class HomeTests extends TestBase {
         steps.checkTopHeader("Развлечения");
         steps.checkTopHeader("Путешествия и спорт");
         steps.checkTopHeader("Аксессуары");
-
-        steps.checkTopHeader("Ваш город");
 
         steps.checkMainBanner();
 
@@ -169,7 +168,7 @@ public class HomeTests extends TestBase {
             $("[element='Collapse']").click();
         });
         step("Завершение диалога", () -> {
-            $(byTagAndText("div", "Завершить диалог")).click();
+            $("[component='ContainedButton']").sibling(0).click();
         });
         step("Выбор оценки общения", () -> {
             $("[component='CloseChatStep2']").$("._7vjvu").sibling(3).click();
