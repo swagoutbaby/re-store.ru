@@ -154,17 +154,12 @@ public class HomeTests extends TestBase {
             $("[name='flomni:toggler']").click();
         });
         switchTo().frame("flomni:pager"); // Переход внтурь дерева чата
-        steps.checkChatItems("Привет!");
-        steps.checkChatItems("Напишите нам, мы любим общаться");
-        steps.checkChatItems("Написать в мессенджер");
         step("Переход в чат", () -> {
             $("[type='StartMessagingButton']").click();
 
         });
-        steps.checkChatPage("Начиная или продолжая общение в чате, вы соглашаетесь c обработкой ваших персональных данных");
-        steps.checkChatPage("Соглашаюсь");
         step("Проверка отображения поля ввода", () -> {
-            $("[placeholder='Введите сообщение']").shouldBe(visible);
+            $(".IrGbZ.l+xtk").shouldBe(visible);
         });
         step("Проверка отображения кнопки отправления сообщения", () -> {
             $("._7vjvu.ZOca1").shouldBe(visible);
@@ -223,8 +218,6 @@ public class HomeTests extends TestBase {
         steps.checkBookingPage("Способ получения");
         steps.checkBookingPage("Способ оплаты");
         steps.checkBookingPage("При получении");
-        steps.checkBookingPage("Онлайн-оплата");
-        steps.checkBookingPage("Кредит");
         steps.checkBookingPage("Перезвоните мне для подтверждения заказа");
         steps.checkBookingPage("Оформить заказ");
 

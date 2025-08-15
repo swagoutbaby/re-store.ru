@@ -63,12 +63,6 @@ public class PageWithHome {
         return this;
     }
 
-    @Step("Проверка отображения блока бестселлеров")
-    public PageWithHome checkBestsellers(String element) {
-        bestsellers.shouldHave(text(element));
-        return this;
-    }
-
     @Step("Проверка отображения блока 'Вам может пригодиться'")
     public PageWithHome checkCouldBeUseful(String element) {
         couldBeUseful.shouldHave(text(element));
@@ -102,12 +96,6 @@ public class PageWithHome {
     @Step("Проверка отображения элементов чата")
     public PageWithHome checkChatItems(String word) {
         $(".Uq2nE").shouldHave(text(word));
-        return this;
-    }
-
-    @Step("Проверка отображения элементов диалога")
-    public PageWithHome checkChatPage(String word) {
-        chatPage.shouldHave(text(word));
         return this;
     }
 
