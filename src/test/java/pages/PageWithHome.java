@@ -33,7 +33,7 @@ public class PageWithHome {
     @Step("Открыть главную страницу")
     public PageWithHome openPage() {
         open("");
-        Selenide.sleep(4500);
+        Selenide.sleep(3000);
         return this;
     }
 
