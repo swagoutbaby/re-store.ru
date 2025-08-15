@@ -23,9 +23,9 @@ public class PageWithHome {
             sectionEcosystem = $(".section-ecosystem"),
             sectionBlog = $(".section-products"),
             lowestFooter = $(".prerender-footer"),
-            chatPage = $("[component='ChatTab']"),
             product = $(".product-card--hovered"),
-            bookingPage = $(".popmechanic-desktop");
+            bookingPage = $(".popmechanic-desktop"),
+            location = $(".location");
 
 
 
@@ -93,12 +93,6 @@ public class PageWithHome {
         return this;
     }
 
-    @Step("Проверка отображения элементов чата")
-    public PageWithHome checkChatItems(String word) {
-        $(".Uq2nE").shouldHave(text(word));
-        return this;
-    }
-
     @Step("Выбрать продукт")
     public PageWithHome chooseProduct(String word) {
         product.click();
@@ -108,6 +102,13 @@ public class PageWithHome {
     @Step("Проверка элементов страницы оформления заказа")
     public PageWithHome checkBookingPage(String word) {
         bookingPage.shouldHave(text(word));
+        return this;
+    }
+
+    @Step("Выбор города")
+    public PageWithHome chooseCity(String city) {
+        location.click();
+        $(byText(city)).click();
         return this;
     }
 

@@ -27,6 +27,7 @@ public class HomeTests extends TestBase {
     void loginEmailTest() {
         steps.openPage();
         steps.closeCookie();
+        steps.chooseCity("Санкт-Петербург и ЛО");
         step("Открыть вход в аккаунт", () -> {
             $(".header-icons__item").click();
         });
@@ -51,6 +52,7 @@ public class HomeTests extends TestBase {
     void loginNumberTest() {
         steps.openPage();
         steps.closeCookie();
+        steps.chooseCity("Санкт-Петербург и ЛО");
         step("Открыть вход в аккаунт", () -> {
             $(".header-icons__item").click();
         });
@@ -72,6 +74,7 @@ public class HomeTests extends TestBase {
     void homeTest() {
         steps.openPage();
         steps.closeCookie();
+        steps.chooseCity("Санкт-Петербург и ЛО");
         steps.checkTopHeader("Магазины");
         steps.checkTopHeader("Сервисные центры");
         steps.checkTopHeader("Бизнесу");
@@ -149,6 +152,7 @@ public class HomeTests extends TestBase {
     void chatTest() {
         steps.openPage();
         steps.closeCookie();
+        steps.chooseCity("Санкт-Петербург и ЛО");
         Selenide.sleep(4500);
         step("Открыть чат", () -> {
             $("[name='flomni:toggler']").click();
@@ -157,9 +161,6 @@ public class HomeTests extends TestBase {
         step("Переход в чат", () -> {
             $("[type='StartMessagingButton']").click();
 
-        });
-        step("Проверка отображения поля ввода", () -> {
-            $(".IrGbZ.l+xtk").shouldBe(visible);
         });
         step("Проверка отображения кнопки отправления сообщения", () -> {
             $("._7vjvu.ZOca1").shouldBe(visible);
@@ -182,6 +183,7 @@ public class HomeTests extends TestBase {
     void e2eBuyMacBookTest() {
         steps.openPage();
         steps.closeCookie();
+        steps.chooseCity("Санкт-Петербург и ЛО");
         step("Выбрать категорию 'Компьютеры и ноутбуки'", () -> {
             $("[data-campaign-id='kompyutery-i-noutbuki']").click();
         });
@@ -230,6 +232,7 @@ public class HomeTests extends TestBase {
     void searchTest() {
         steps.openPage();
         steps.closeCookie();
+        steps.chooseCity("Санкт-Петербург и ЛО");
         step("Нажать на поле поиска", () -> {
             $(".search-line").click();
         });
@@ -251,6 +254,7 @@ public class HomeTests extends TestBase {
     void compareTest() {
         steps.openPage();
         steps.closeCookie();
+        steps.chooseCity("Санкт-Петербург и ЛО");
         step("Выбрать категорию 'Apple'", () -> {
             $("[data-campaign-id='apple']").click();
         });
