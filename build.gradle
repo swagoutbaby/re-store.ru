@@ -28,7 +28,6 @@ dependencies {
     testImplementation(
             "com.codeborne:selenide:$selenideVersion", // Добавление зависимости Selenide для тестов
             "org.junit.jupiter:junit-jupiter:5.10.2", // Добавление зависимости JUnit 5 для тестов
-            "com.github.javafaker:javafaker:1.0.2", // Добавление зависимости Java Faker для генерации данных
             "io.qameta.allure:allure-selenide:$allureVersion", // Добавление зависимости Allure Selenide для интеграции отчетов
             'org.slf4j:slf4j-simple:2.0.7' // Добавление зависимости SLF4J для логирования
     )

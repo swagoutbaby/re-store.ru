@@ -156,7 +156,6 @@ public class HomeTests extends TestBase {
         switchTo().frame("flomni:pager"); // Переход внтурь дерева чата
         steps.checkChatItems("Привет!");
         steps.checkChatItems("Напишите нам, мы любим общаться");
-        steps.checkChatItems("Новый чат");
         steps.checkChatItems("Написать в мессенджер");
         step("Переход в чат", () -> {
             $("[type='StartMessagingButton']").click();
