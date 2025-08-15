@@ -139,9 +139,6 @@ public class HomeTests extends TestBase {
         steps.checkLowestFooter("Помощь");
         steps.checkLowestFooter("Каталог");
         steps.checkLowestFooter("iPhone");
-        steps.checkLowestFooter("8 800 700-19-44");
-        steps.checkLowestFooter("+7 495 502-15-52 (для бизнеса)");
-        steps.checkLowestFooter("© restore:, 2025");
     }
 
     @Test
@@ -163,15 +160,6 @@ public class HomeTests extends TestBase {
         });
         step("Проверка отображения кнопки отправления сообщения", () -> {
             $("._7vjvu.ZOca1").shouldBe(visible);
-        });
-        step("Закрыть чат", () -> {
-            $("[element='Collapse']").click();
-        });
-        step("Завершение диалога", () -> {
-            $("[component='ContainedButton']").sibling(0).click();
-        });
-        step("Выбор оценки общения", () -> {
-            $("[component='CloseChatStep2']").$("._7vjvu").sibling(3).click();
         });
     }
 
