@@ -50,12 +50,8 @@
 - **Allure TestOps**: Платформа для управления тестированием и анализа результатов тестов.
 
 <a id="jenkins"></a>
-## <a href="https://www.jenkins.io/"><img height="25" src="images/icons/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/rzd.ru_UI_regress/)</a>
+## <a href="https://www.jenkins.io/"><img height="25" src="images/icons/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/re-store.ru/)</a>
 Jenkins используется для автоматизации сборки и тестирования проекта. Он позволяет любому члену команды запускать тесты в любое время. В данном проекте сборка выполняется автоматически каждые 6 часов.
-<p align="center">  
-<a href="https://jenkins.autotests.cloud/job/rzd.ru_UI_regress/"><img src="images/screenshots/jenkins-scrin.png" alt="Jenkins" width="950"/></a>  
-</p>
-
 
 ### **Параметры сборки в Jenkins:**
 
@@ -79,21 +75,9 @@ regression_test
 
 
 <a id="allure"></a>
-## <a href="https://allurereport.org/"><img height="25" src="images/icons/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/rzd.ru_UI_regress/allure/)</a>
+## <a href="https://allurereport.org/"><img height="25" src="images/icons/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/re-store.ru/allure/)</a>
 
 Allure используется для генерации подробных отчетов о тестировании. Он предоставляет информацию о результатах тестов, включая графики и диаграммы, что помогает анализировать качество продукта и выявлять проблемные области.
-</p>
-
-### Главная страница
-
-<p align="center">  
-<img title="Allure Overview Dashboard" src="images/screenshots/allure.png" width="850">  
-</p>
-
-### Пример теста
-
-  <p align="center">  
-<img title="Allure Graphics" src="images/screenshots/allure1.png" width="850">
 </p>
 
 <a id="telegram"></a>
@@ -101,18 +85,8 @@ Allure используется для генерации подробных о�
 Настроены автоматические уведомления в Telegram для получения информации о статусе сборки и тестирования.
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="images/screenshots/telega-scrin.png" width="550">  
+<img title="Allure Overview Dashboard" src="images/screenshots/telega_allure.png" width="550">  
 </p>
-
-
-<a id="video"></a>
-## <img alt="Selenoid" height="25" src="images/icons/Selenoid.svg" width="25"/></a> Видеозаписи выполнения тестов в Selenoid 
-Помогают визуально проверять, как проходят тесты и выявлять проблемы.
-
-<p align="center">
-<img title="Selenoid Video" src="images/video/video.gif" width="550" height="350"  alt="video">   
-</p>
-
 
 <a id="other"></a>
 ### Плагины
