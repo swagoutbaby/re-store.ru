@@ -13,8 +13,6 @@
 
 * <a href="#telegram">Уведомление ботом в Telegram о сборке</a>
 
-* <a href="#video">Видео выполнения теста в Selenoid</a>
-
 * <a href="#other">Версии</a>
 
 <a id="tools"></a>
