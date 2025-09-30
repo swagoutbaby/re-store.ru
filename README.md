@@ -1,5 +1,5 @@
 # Проект по автоматизации тестирования
-# для компании [restore:](https://re-store.ru/) <img alt="Jenkins" height="25" src="images/icons/RZD.png" width="80"/>
+# для компании [restore:](https://re-store.ru/) <img alt="Jenkins" height="25" src="images/icons/restorelogo.png" width="80"/>
 
 > restore: — официальный партнер компании Apple в России и Европе, имеющий статус премиум-реселлера Apple Premium Reseller.
 
