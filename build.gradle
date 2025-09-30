@@ -1,0 +1,57 @@
+import org.gradle.api.tasks.testing.Test
+
+plugins {
+    id 'java-library'
+    id('io.qameta.allure') version '2.12.0'
+}
+
+def allureVersion = "2.27.0", // Определение версии Allure
+    selenideVersion = "7.9.4" // Определение версии Selenide
+
+allure {
+    report {
+        version.set(allureVersion) // Установка версии Allure для отчетов
+    }
+    adapter {
+        aspectjWeaver.set(true) // Использование AspectJ Weaver для Allure
+        frameworks {
+            junit5 {
+                adapterVersion.set(allureVersion) // Установка версии Allure адаптера для JUnit 5
+            }
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(
+            "com.codeborne:selenide:$selenideVersion", // Добавление зависимости Selenide для тестов
+            "org.junit.jupiter:junit-jupiter:5.10.2", // Добавление зависимости JUnit 5 для тестов
+            "io.qameta.allure:allure-selenide:$allureVersion", // Добавление зависимости Allure Selenide для интеграции отчетов
+            'org.slf4j:slf4j-simple:2.0.7' // Добавление зависимости SLF4J для логирования
+    )
+}
+
+tasks.withType(Test) {
+    systemProperties(System.getProperties()) // Передача системных свойств в задачи тестирования
+    useJUnitPlatform() // Указание использовать JUnit Platform для запуска тестов
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
+
+tasks.withType(Test) {
+    systemProperties(System.getProperties()) // Повторная передача системных свойств в задачи тестирования
+    useJUnitPlatform {
+        if (System.getProperty("type") != null && !System.getProperty("type").isEmpty()) { // Включение только тех тестов, которые помечены определенными тегами, если задан системный параметр "type"
+            includeTags System.getProperty("type")
+        }
+    }
+}
